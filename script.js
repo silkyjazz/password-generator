@@ -7,17 +7,41 @@ if the number being given by the user meets the criteria of being longer than 8
 characters and shorter than 128
 */
 function generatePassword(password){
-  var passwordPrompt = prompt("Please enter number of characters", "");
-  var min= 8;
-  var max= 128;
-  if (parseInt(passwordPrompt) > min && parseInt(passwordPrompt) < max){
-    alert('Accepted');
+  var passwordPrompt = window.prompt("Please enter number of characters", "");
+  // var min= 8;
+  // var max= 128;
+
+  if( parseInt(passwordPrompt) < 8 || parseInt(passwordPrompt) > 128){
+    window.alert("Please choose a number between 8-128")
+    generatePassword()
+  }else if (!passwordPrompt){
+    window.alert("Goodbye!")
+  }else{
+    window.alert("thank you")
   }
-   else {
-    alert('Please choose a number between 8 and 128');
-    generatePassword();
-  }
+  // if (parseInt(passwordPrompt) > min && parseInt(passwordPrompt) < max){
+  //   alert('Accepted');
+  // }
+  //  else {
+  //   alert('Please choose a number between 8 and 128');
+  //   generatePassword();
+  // }
+
+
+  // while ((parseInt(passwordPrompt) < min && parseInt(passwordPrompt) > max)){
+  // generatePassword();
+  // if (parseInt(passwordPrompt) > min && parseInt(passwordPrompt) < max){
+  //   alert('Accepted');
+  // }
+  //  else {
+  //   alert('Please choose a number between 8 and 128');
+  // }
 }
+
+
+// do {
+//   generatePassword()
+// } while((parseInt(passwordPrompt) >! min && parseInt(passwordPrompt) <! max));
 
 
 // Get references to the #generate element
