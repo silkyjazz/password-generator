@@ -34,20 +34,20 @@ function generatePassword(passwordText){
     passwordChoices = passwordChoices + alphaUpper
   }
   if (isLowercase){
-    passwordChoices = passwordChoices + alphaUpper + alphaLower
+    passwordChoices = passwordChoices + alphaLower
   }
   if (isNumbers){
-    passwordChoices = passwordChoices + alphaUpper + alphaLower + numbers
+    passwordChoices = passwordChoices +  numbers
   }
   if (isSpecialChar){
-    passwordChoices = passwordChoices + alphaUpper + alphaLower + numbers + specialChar
+    passwordChoices = passwordChoices + specialChar
   }
 
   for (let index = 0; index < parseInt(passwordPrompt); index++) {
     const randomElement = passwordChoices[Math.floor(Math.random() * passwordChoices.length)];
     password = password + randomElement
   } 
- if (!isUppercase && !isLowercase){
+ if (!isUppercase && !isLowercase && !isSpecialChar && !isNumbers ){
     alert("Please choose at least 1 criteria. Try again")
     passwordText.value = ""
   }
