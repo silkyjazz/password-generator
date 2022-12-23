@@ -63,7 +63,7 @@ function generatePassword(passwordText){
     passwordText.value = ""
   }
   // output will be the new generated password
-  return password;
+  return password; 
 
 
 } 
