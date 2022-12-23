@@ -36,8 +36,8 @@ After the user clicks through the criteria the password is generated and display
 ![Generated Password](assets/7.png)
 
 If the wish to include just one criteria the output will be
-![All symbols](asseets/10.png)
-![All numbers](assets.11.png)
+![option1](asseets/10.png)
+![option2](assets.11.png)
 The user will see this screen if the number they have entered does not meet the minimum of 8 or maximum of 128.
 ![Alert](assets/9.png)
 
